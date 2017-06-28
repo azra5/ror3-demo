@@ -1,0 +1,38 @@
+<style>
+table {
+  width: 40%;
+}
+table th {
+    width: auto !important;
+}
+
+</style>
+
+
+<h1>All products</h1>
+<div class="row">
+<table class="table col-md-4">
+<thead>
+  <tr class="row">
+    <th>
+      Id
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Price
+    </th>
+  </tr>
+</thead>
+<tbody>
+  <% @products.each do |product| %>
+  <tr class="row">
+    <td><%= product.id %></td>
+    <td><%= product.name %></td>
+    <td><%= product.price %></td>
+  <% end %>
+</tr>
+</tbody>
+</table>
+</div>
